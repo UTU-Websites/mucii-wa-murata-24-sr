@@ -1308,7 +1308,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), url("images/bg.jpg");
+		background-image: url("images/overlay.png"), url("images/ink-bg.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
 		background-attachment: fixed;
@@ -1772,8 +1772,11 @@ input, select, textarea {
 
 	#nav {
 		text-align: center;
-		height: 4.25em;
+		height: 2.25em;
 		cursor: default;
+		background-color: #fafafaaf;
+		border-radius: 50px;
+		margin-bottom: 15px;
 	}
 
 		#nav a {
@@ -2144,15 +2147,19 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		color: rgba(255, 255, 255, 0.45);
+		color: rgba(0, 0, 0, 0.925);
 		text-align: center;
-		padding: 2em 0 0 0;
-		font-size: 0.75em;
+		padding: 12px;
+		font-size: 20px;
+		background-color: #fafafaaf;
+		border-radius: 50px;
+		margin-top: 15px;
+		height: 46px;
 	}
 
 		#footer a {
 			color: #ddd;
-			color: rgba(255, 255, 255, 0.65);
+			color: rgba(0, 0, 0, 0.925);
 			-moz-transition: color .25s ease-in-out;
 			-webkit-transition: color .25s ease-in-out;
 			-ms-transition: color .25s ease-in-out;

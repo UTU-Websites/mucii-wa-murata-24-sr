@@ -1331,10 +1331,11 @@ img .avatar-custom {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
-		font-weight: 300;
-		color: #777777;
-		font-size: 20pt;
+		font-family: "Playfair Display", serif;
+  	font-optical-sizing: auto;
+  	font-weight: 500;
+  	font-style: normal;
+		font-size: 22pt;
 		line-height: 1.75em;
 	}
 
@@ -1442,6 +1443,24 @@ img .avatar-custom {
 	p, ul, ol, dl, table, blockquote, form {
 		margin-bottom: 2em;
 	}
+
+	/*First slide*/
+.jina-a {
+	font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+	font-size: 65px;
+	letter-spacing: 2.3px;
+	color: black;
+}
+.jina-b {
+	font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 25px;
+	letter-spacing: 2px;
+}
 
 /* Table */
 

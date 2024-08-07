@@ -1,8 +1,12 @@
-/*
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+document.addEventListener('DOMContentLoaded', function() {
+  var spinnerContainer = document.getElementById('spinner-container');
+  var content = document.getElementById('content');
+
+  window.addEventListener('load', function() {
+    spinnerContainer.style.display = 'none';
+    content.style.display = 'block';
+  });
+});
 
 (function($) {
 

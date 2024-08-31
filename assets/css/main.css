@@ -70,6 +70,15 @@ img .avatar-custom {
 	filter: drop-shadow(0 0 20px #121212);
 }
 
+#sub-title-program {
+  background: rgba(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
 /*Spinner*/
 
 #loader {
@@ -1491,21 +1500,12 @@ img .avatar-custom {
 	}
 
 	/*First slide*/
-.jina-a {
-	font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-	font-size: 65px;
-	letter-spacing: 2.3px;
-	color: black;
-}
-.jina-b {
-	font-family: "Allura", cursive;
+.jina {
+ font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
 	font-size: 25px;
-	letter-spacing: 2px;
+	letter-spacing: 2px;	
 }
 
 /* Table */
@@ -2283,7 +2283,7 @@ img .avatar-custom {
 					}
 
 					#main > .panel.intro header {
-						padding: 2.75em 2em 2.5em 2em;
+						padding: 2.5em 2em 2.5em 2em;
 					}
 
 						#main > .panel.intro header p {

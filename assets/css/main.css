@@ -131,6 +131,9 @@ img .avatar-custom {
   }
 }
 
+
+/*Card-test*/
+
 /* Row */
 
 	.row {
@@ -1919,7 +1922,6 @@ img .avatar-custom {
 
 	#nav {
 		text-align: center;
-		height: 2.25em;
 		cursor: default;
 		background-color: #fafafaaf;
 		border-radius: 50px;
@@ -2022,8 +2024,17 @@ img .avatar-custom {
 
 		}
 
-/* Wrapper */
+		/*toast*/
+		.toast-container {
+  	top: 55%;
+		}
 
+		.toast-container img {
+  	width: 250px;
+  	height: auto;
+		}
+
+	/* Wrapper */
 	#wrapper {
 		width: 45em;
 		margin: 0 auto;

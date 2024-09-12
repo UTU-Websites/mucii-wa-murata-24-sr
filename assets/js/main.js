@@ -8,6 +8,39 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+  })
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var toggleButton = document.querySelector(".ayaBtn");
+  var moreSection = document.querySelector("#moreSection");
+
+  toggleButton.addEventListener("click", function() {
+    if (moreSection.classList.contains("show")) {
+      toggleButton.innerHTML = "Read More"; // Change to "Read More" when collapsed
+    } else {
+      toggleButton.innerHTML = "Read Less"; // Change to "Read Less" when expanded
+    }
+  });
+
+  // Ensure the button text is updated when the collapse is toggled (if triggered through other means)
+  moreSection.addEventListener('shown.bs.collapse', function () {
+    toggleButton.innerHTML = "Read Less";
+  });
+  
+  moreSection.addEventListener('hidden.bs.collapse', function () {
+    toggleButton.innerHTML = "Read More";
+  });
+});
+
+
 (function($) {
 
 	var $window = $(window),

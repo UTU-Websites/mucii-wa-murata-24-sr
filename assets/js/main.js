@@ -40,6 +40,26 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  var toggleButtons = document.querySelectorAll(".togglePackage");
+
+  toggleButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var packageCosts = document.querySelector(".package-costs");
+
+      if (packageCosts.style.maxHeight === "0px" || packageCosts.style.maxHeight === "") {
+        // Show the package section with a smooth transition
+        packageCosts.style.maxHeight = packageCosts.scrollHeight + "px";
+        this.innerHTML = "Hide Package Costs";
+      } else {
+        // Hide the package section
+        packageCosts.style.maxHeight = "0";
+        this.innerHTML = "Show Package Costs";
+      }
+    });
+  });
+});
+
 
 (function($) {
 

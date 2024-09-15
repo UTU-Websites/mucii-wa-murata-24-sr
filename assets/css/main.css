@@ -132,7 +132,7 @@ img .avatar-custom {
 }
 
 
-/*Card-test*/
+
 
 /* Row */
 
@@ -2027,12 +2027,20 @@ img .avatar-custom {
 		/*toast*/
 		.toast-container {
   	top: 55%;
+		background-color: white;
 		}
 
 		.toast-container img {
   	width: 250px;
   	height: auto;
 		}
+
+	/*read more pc section*/
+		.hidden-section {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.5s ease-out;
+		}		
 
 	/* Wrapper */
 	#wrapper {

@@ -79,6 +79,16 @@ img .avatar-custom {
   width: 100%;
 }
 
+/*details*/
+ li {
+	margin-bottom: 10px;
+	list-style: none
+ }
+
+ i {
+	font-weight: ;
+ }
+
 /*Spinner*/
 
 #loader {

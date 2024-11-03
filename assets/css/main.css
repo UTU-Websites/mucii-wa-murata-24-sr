@@ -82,12 +82,12 @@ img .avatar-custom {
 /*details*/
  li {
 	margin-bottom: 10px;
-	list-style: none
+	list-style: none;
  }
 
- i {
+ /* i {
 	font-weight: ;
- }
+ }*/
 
 /*Spinner*/
 

@@ -85,6 +85,10 @@ img .avatar-custom {
 	list-style: none;
  }
 
+ ol, ul {
+	padding-left: 1rem !important; 
+}
+
  /* i {
 	font-weight: ;
  }*/
@@ -1546,81 +1550,65 @@ img .avatar-custom {
 		}
 
 /*maudhui-btn */
+/* From Uiverse.io by alexmaracinaru */ 
 .maudhui-btn {
-  align-items: center;
-  appearance: none;
-  background-color: #fff;
-  border-radius: 24px;
-  border-style: none;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-  box-sizing: border-box;
-  color: #3c4043;
-  cursor: pointer;
-  display: inline-flex;
-  fill: currentcolor;
-  font-family: "Google Sans",Roboto,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 48px;
-  justify-content: center;
-  letter-spacing: .25px;
-  line-height: normal;
-  max-width: 100%;
-  overflow: visible;
-  padding: 2px 24px;
-	margin-top: 15px;
   position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-  will-change: transform,opacity;
-  z-index: 0;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-.maudhui-btn:hover {
-  background: #F6F9FE;
-  color: #174ea6;
+.maudhui-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #070C26;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.maudhui-btn span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #E1A426;
+}
+
+.maudhui-btn svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #E1A426;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.maudhui-btn:hover:before {
+  width: 100%;
+  background: #070C26;
+}
+
+.maudhui-btn:hover svg {
+  transform: translateX(0);
 }
 
 .maudhui-btn:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
+  transform: scale(0.95);
 }
 
-.maudhui-btn:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}
-
-.maudhui-btn:not(:disabled) {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.maudhui-btn:not(:disabled):hover {
-  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
-}
-
-.maudhui-btn:not(:disabled):focus {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.maudhui-btn:not(:disabled):active {
-  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
-}
-
-.maudhui-btn:disabled {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.maudhui-btn, a {
-	text-decoration: none;
-	color: black;
-
-}
 
 /* Form */
 
@@ -1681,7 +1669,7 @@ img .avatar-custom {
 /* Section/Article */
 
 	section, article {
-		margin-bottom: 3em;
+		margin-bottom: 0.5em;
 	}
 
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
@@ -1762,7 +1750,7 @@ img .avatar-custom {
 		outline: 0;
 		padding: 0.7em 1.5em 0.7em 1.5em;
 	}
-
+		
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -1930,13 +1918,20 @@ img .avatar-custom {
 
 /* Nav */
 
-	#nav {
-		text-align: center;
-		cursor: default;
-		background-color: #fafafaaf;
-		border-radius: 50px;
-		margin-bottom: 15px;
-	}
+#nav {
+	text-align: center;
+	cursor: default;
+	background-color: #fafafaaf;
+	border-radius: 50px;
+	margin-bottom: 15px;
+	padding: 10px 30px; /* Add horizontal padding */
+	max-width: 100%; /* Ensure it doesn't overflow */
+	display: inline-block; /* Prevent unnecessary width expansion */
+	display: flex;
+  justify-content: center; /* Center the icons */
+  flex-wrap: wrap; /* Allow wrapping if the icons overflow */
+  padding: 10px;
+}
 
 		#nav a {
 			position: relative;
@@ -1946,7 +1941,7 @@ img .avatar-custom {
 			height: 1em;
 			line-height: 0.9em;
 			font-size: 2.5em;
-			margin: 0 0.25em 0 0.25em;
+			margin: 0 1em;
 			opacity: 0.35;
 			outline: 0;
 			-moz-transition: opacity .25s ease-in-out;
@@ -2027,6 +2022,15 @@ img .avatar-custom {
 				}
 
 		@media screen and (max-width: 980px) {
+			#nav {
+        flex-wrap: wrap; /* Wrap icons on small screens */
+    }
+
+			#nav a {
+        font-size: 1.8em; /* Reduce size */
+        margin: 0 0.3em; /* Tighten spacing */
+    }
+    
 
 			#nav a span {
 				display: none;
@@ -2057,7 +2061,7 @@ img .avatar-custom {
 
 	/* Wrapper */
 	#wrapper {
-		width: 45em;
+		width: 90%;
 		margin: 0 auto;
 		min-height: 100vh;
 		max-width: 100%;
@@ -2164,7 +2168,7 @@ img .avatar-custom {
 
 			#main > .panel.intro {
 				padding: 0;
-				height: 20em;
+				height: 33em;
 				display: -moz-flex;
 				display: -webkit-flex;
 				display: -ms-flex;

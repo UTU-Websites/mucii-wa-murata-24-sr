@@ -40,20 +40,42 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+//Event Websites
 document.addEventListener("DOMContentLoaded", function() {
-  var toggleButtons = document.querySelectorAll(".togglePackage");
+  var toggleButtonsE = document.querySelectorAll(".togglePackageE");
 
-  toggleButtons.forEach(function(button) {
+  toggleButtonsE.forEach(function(button) {
     button.addEventListener("click", function() {
-      var packageCosts = document.querySelector(".package-costs");
+      var packageCostsE = document.querySelector(".package-e-costs");
 
-      if (packageCosts.style.maxHeight === "0px" || packageCosts.style.maxHeight === "") {
+      if (packageCostsE.style.maxHeight === "0px" || packageCostsE.style.maxHeight === "") {
         // Show the package section with a smooth transition
-        packageCosts.style.maxHeight = packageCosts.scrollHeight + "px";
+        packageCostsE.style.maxHeight = packageCostsE.scrollHeight + "px";
         this.innerHTML = "Hide Package Costs";
       } else {
         // Hide the package section
-        packageCosts.style.maxHeight = "0";
+        packageCostsE.style.maxHeight = "0";
+        this.innerHTML = "Show Package Costs";
+      }
+    });
+  });
+});
+
+//Business & NGO Websites
+document.addEventListener("DOMContentLoaded", function() {
+  var toggleButtonsBN = document.querySelectorAll(".togglePackageBN");
+
+  toggleButtonsBN.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var packageCostsBN = document.querySelector(".package-bn-costs");
+
+      if (packageCostsBN.style.maxHeight === "0px" || packageCostsBN.style.maxHeight === "") {
+        // Show the package section with a smooth transition
+        packageCostsBN.style.maxHeight = packageCostsBN.scrollHeight + "px";
+        this.innerHTML = "Hide Package Costs";
+      } else {
+        // Hide the package section
+        packageCostsBN.style.maxHeight = "0";
         this.innerHTML = "Show Package Costs";
       }
     });
